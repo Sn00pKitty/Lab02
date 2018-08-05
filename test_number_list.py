@@ -133,3 +133,12 @@ def test_kth_smallest():
     assert kth_smallest([-67, 5, 32.5, -322, 123.33, 434.1], 4) == 32.5
     assert kth_smallest([-67, 5, 32.5, -322, 123.33, 434.1], 5) == 123.33
     assert kth_smallest([-67, 5, 32.5, -322, 123.33, 434.1], 6) == 434.1
+
+if __name__ == '__main__':
+	test_reverse()
+	test_max()
+	test_min()
+	test_sum()
+	test_average()
+	test_descending()
+	test_second_smallest()
