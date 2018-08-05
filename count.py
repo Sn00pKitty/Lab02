@@ -15,9 +15,9 @@ def count_char(text):
 
 
 	for i in range(len(text)):
-		if text[i] in d and text[i] != ' ':
+		if text[i] in d:
 			d[text[i]] += 1
-		elif text[i] != ' ':
+		else:
 			d[text[i]] = 1
 
 	for i in d:
@@ -32,9 +32,9 @@ def count_char_insensitive(text):
 
 
 	for i in range(len(text)):
-		if string[i] in d and string[i] != ' ':
+		if string[i] in d:
 			d[string[i]] += 1
-		elif string[i] != ' ':
+		else:
 			d[string[i]] = 1
 
 	for i in d:
@@ -42,7 +42,24 @@ def count_char_insensitive(text):
 
 # bonus task:
 def count_char_ordered(text):
-    pass
+	string = text.lower()
+	i = 0
+	count = 0
+	d = dict()
+
+
+	for i in range(len(text)):
+		if string[i] in d:
+			d[string[i]] += 1
+		else:
+			d[string[i]] = 1
+	lis = d.items()
+
+	sorted_by_value = sorted(lis, key=lambda kv: kv[1], reverse = True)
+
+	for i in sorted_by_value:
+		print (i[0], i[1])
+
     # add your code here 
 
 text1 = "I felt happy because I saw the others were happy and because I knew I should feel happy but I wasn't really happy" 
