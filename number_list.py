@@ -25,11 +25,25 @@ def second_smallest(numbers):
 	return numbers[i]
 
 
+
 '''
  bonus task:
  a function that takes in a list of numbers, and an index 'k' 
  and prints the kth smallest number in the list
 '''
 def kth_smallest(numbers, k):
-    #TODO: find the kth smallest number in the list
-    pass
+	numbers.sort()
+	i = 0
+	num = numbers[0]
+	counter = 1
+	j = 0
+	while i < len(numbers) and counter != k:
+		if numbers[i] != num:
+			num = numbers[i]
+			counter += 1
+			if counter == k:
+				j = i
+		i += 1
+
+	#print (numbers[j])
+	return numbers[j]

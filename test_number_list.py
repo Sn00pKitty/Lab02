@@ -142,3 +142,4 @@ if __name__ == '__main__':
 	test_average()
 	test_descending()
 	test_second_smallest()
+	test_kth_smallest()
